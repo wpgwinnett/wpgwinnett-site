@@ -1,0 +1,21 @@
+---
+- name: Set default timezone
+  ini_file:
+    dest: /etc/php.ini
+    section: Date
+    option: "date.timezone"
+    value: "{{ php_date_timezone | default('GMT') }}"
+    state: present
+  sudo: yes
+
+- name: Secure cgi.fix_pathinfo setting
+  ini_file:
+    dest: /etc/php.ini
+    section: PHP
+    option: "cgi.fix_pathinfo"
+    value: 0
+    state: present
+  sudo: yes
+
+- include: ./xdebug.yml
+  when: php_enable_xdebug

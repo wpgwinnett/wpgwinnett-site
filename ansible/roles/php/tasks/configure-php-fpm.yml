@@ -1,0 +1,40 @@
+---
+- name: PHP-FPM Set option - listen
+  ini_file:
+    dest: /etc/php-fpm.d/www.conf
+    section: www
+    option: listen
+    value: "127.0.0.1:9000"
+    state: present
+  when: php_enable_php_fpm
+  sudo: yes
+
+- name: PHP-FPM Set option - emergency_restart_threshold
+  ini_file:
+    dest: /etc/php-fpm.d/www.conf
+    section: www
+    option: emergency_restart_threshold
+    value: 10
+    state: present
+  when: php_enable_php_fpm
+  sudo: yes
+
+- name: PHP-FPM Set option - emergency_restart_interval
+  ini_file:
+    dest: /etc/php-fpm.d/www.conf
+    section: www
+    option: emergency_restart_interval
+    value: 1m
+    state: present
+  when: php_enable_php_fpm
+  sudo: yes
+
+- name: PHP-FPM Set option - process_control_timeout
+  ini_file:
+    dest: /etc/php-fpm.d/www.conf
+    section: www
+    option: process_control_timeout
+    value: 10s
+    state: present
+  when: php_enable_php_fpm
+  sudo: yes

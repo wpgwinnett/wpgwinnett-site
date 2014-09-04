@@ -1,0 +1,13 @@
+---
+php_enable_php_fpm: true
+php_enable_xdebug: true
+php_packages:
+  - php-fpm
+  - php-cli
+  - php-common
+  - php-devel
+  - php-memcache
+  - php-mysql
+  - php-curl
+  - php-pear
+  - php-gd

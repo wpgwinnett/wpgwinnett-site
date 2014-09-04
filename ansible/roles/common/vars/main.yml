@@ -1,0 +1,12 @@
+---
+__system_packages:
+  - memcached
+  - ImageMagick
+  - git
+  - zip
+  - unzip
+  - curl
+  - make
+  - vim
+  - postfix
+  - dos2unix

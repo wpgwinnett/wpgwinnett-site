@@ -1,0 +1,47 @@
+---
+- name: Remi Dependency on CentOS 7 and Red Hat (RHEL) 7
+  yum:
+   name: http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-1.noarch.rpm
+   state: present
+  when: ansible_os_family == "RedHat" and {{ ansible_distribution_version.split('.')[0] }} == 7
+  sudo: yes
+
+- name: Update Remi Repository CentOS 7 and Red Hat (RHEL) 7
+  yum:
+    name: http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
+    state: present
+  when: ansible_os_family == "RedHat" and {{ ansible_distribution_version.split('.')[0] }} == 7
+  sudo: yes
+
+- name: Update server packages (RedHat)
+  yum:
+    name: '*'
+    state: latest
+  when: ansible_os_family == "RedHat"
+  sudo: yes
+
+- name: Update server packages (Debian)
+  apt:
+    upgrade: full
+  when: ansible_os_family == "Debian"
+  sudo: yes
+
+- name: Define system packages
+  set_fact: system_packages = "{{ __system_packages || list }}"
+  when: system_packages is not defined
+
+- name: Install packages (RedHat)
+  yum:
+    pkg: "{{ item }}"
+    state: installed
+  with_items: system_packages
+  when: ansible_os_family == "RedHat"
+  sudo: yes
+
+- name: Install packages (Debian)
+  yum:
+    pkg: "{{ item }}"
+    state: installed
+  with_items: system_packages
+  when: ansible_os_family == "Debian"
+  sudo: yes
