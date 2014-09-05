@@ -30,11 +30,11 @@
 - Type the password `vagrant` when prompted.
 
 ### Exporting the MySQL Database
-- After you ssh into the virtual machine run `mysqldump -u root -p ea_homes_dc > /vagrant/sql/backup.sql`
+- After you ssh into the virtual machine run `mysqldump -u root -p db_name > /vagrant/sql/backup.sql`
 - Type the password `vagrant` when prompted.
 - Your `backup.sql` file will now be inside the project `/sql/` directory on your local machine.
 - As a best practice, please use this naming convention for backups: backup-[year][month][day].sql (i.e. backup-20140501.sql).
 - The file named import.sql will be imported automatically during provisioning. Updating this file and pushing the changes to the repo will allow other devs to pull down your changes by running `vagrant provision`.
 
 ### Importing a MySQL Database
-- After you ssh into the virtual machine, run `mysql -u root -p -h localhost ea_homes_dc < /vagrant/sql/import.sql`
+- After you ssh into the virtual machine, run `mysql -u root -p -h localhost db_name < /vagrant/sql/import.sql`
