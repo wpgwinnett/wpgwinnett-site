@@ -6,6 +6,7 @@ __system_packages:
   - zip
   - unzip
   - curl
+  - wget
   - make
   - vim
   - postfix
