@@ -9,5 +9,6 @@ __system_packages:
   - wget
   - make
   - vim
+  - dkms
   - postfix
   - dos2unix

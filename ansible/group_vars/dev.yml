@@ -15,6 +15,7 @@ system_packages:
   - make
   - gcc
   - vim
+  - dkms
   - postfix
   - gettext
   - graphviz
