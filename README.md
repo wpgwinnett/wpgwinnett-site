@@ -9,7 +9,7 @@
 ### Prerequisites
 - Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 - Install [Vagrant](http://www.vagrantup.com/downloads.html)
-- Install the [Vagrant Hosts Updater](https://github.com/cogitatio/vagrant-hostsupdater) plugin
+- Install the [Vagrant Hosts Updater](https://github.com/cogitatio/vagrant-hostsupdater) plugin by running `vagrant plugin install vagrant-hostsupdater`
 - Clone the [repository](https://github.com/wpgwinnett/wpgwinnett-site) project onto your machine
 
 ### Getting Started
