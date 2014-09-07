@@ -2,7 +2,8 @@ require 'yaml'
 
 Vagrant.configure("2") do |config|
 
-	config.vm.box = "jansauer/centos7-core"
+	config.vm.box = 'jansauer/centos7-core'
+	config.vm.box_url = 'https://vagrantcloud.com/jansauer/centos7-core'
 	config.vm.network 'private_network', ip: '192.168.8.22'
 	config.ssh.forward_agent = true
 
