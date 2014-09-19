@@ -10,6 +10,7 @@
 - Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 - Install [Vagrant](http://www.vagrantup.com/downloads.html)
 - Install the [Vagrant Hosts Updater](https://github.com/cogitatio/vagrant-hostsupdater) plugin by running `vagrant plugin install vagrant-hostsupdater`
+- Install the [Vagrant VBGuest](https://github.com/dotless-de/vagrant-vbguest) plugin by running `vagrant plugin install vagrant-vbguest`
 - Install [Ansible](http://docs.ansible.com/intro_installation.html). If you have a Mac and use Homebrew, you can run `brew update` followed by `brew install ansible`.
 - Clone the [repository](https://github.com/wpgwinnett/wpgwinnett-site) project onto your machine.
 
