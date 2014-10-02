@@ -1,3 +1,47 @@
+# Mac
 .DS_Store
+
+# Log files
+*.log
+
+# PHPStorm
 .idea
+
+# Vagrant
 .vagrant
+
+# Composer
+composer.lock
+
+# SCSS
+.sass-cache/
+
+# Node
+node_modules/
+
+# Bower
+bower_components/
+
+# WordPress
+/public_html/cms
+
+# WordPress: Config files
+wp-config-*.php
+!wp-config-dev.php
+
+# WordPress: Must-Use Plugins
+/public_html/content/mu-plugins/*
+!/public_html/content/mu-plugins/index.php
+!/public_html/content/mu-plugins/register-theme-directory.php
+
+# WordPress: Plugins
+/public_html/content/plugins/*
+!/public_html/content/plugins/index.php
+
+# WordPress: Themes
+/public_html/content/themes/*
+!/public_html/content/themes/index.php
+
+# WordPress: Uploads
+/public_html/content/uploads/*
+!/public_html/content/uploads/index.php
