@@ -5,7 +5,7 @@ define( 'APP_DOMAIN', 'wpgwinnett.dev' );
 # Database
 define( 'DB_NAME', 'wpgwinnett' );
 define( 'DB_USER', 'wp_all' );
-define( 'DB_PASSWORD', 'vagrant' );
+define( 'DB_PASSWORD', 'courage' );
 
 # Debug
 define( 'WP_DEBUG', true );
