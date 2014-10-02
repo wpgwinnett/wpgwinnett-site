@@ -23,12 +23,18 @@
 		{
 			"type": "composer",
 			"url": "http://wpackagist.org"
+		},
+		{
+			"type": "git",
+			"url": "https://github.com/wpgwinnett/wpgwinnett-theme"
 		}
 	],
 	"require": {
 		"composer/installers": "1.0.18",
-		"johnpbloch/wordpress": "4.0"
+		"johnpbloch/wordpress": "4.0",
+		"wpgwinnett/wpgwinnett-theme": "*"
 	},
+	"minimum-stability": "dev",
 	"extra": {
 		"wordpress-install-dir": "public_html/cms",
 		"installer-paths": {
