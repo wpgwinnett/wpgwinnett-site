@@ -1,0 +1,38 @@
+{
+    "name"          : "wpgwinnett/wpgwinnett-site",
+    "description"   : "WordPress Gwinnett Website",
+    "type"          : "project",
+    "homepage"      : "http://wpgwinnett.com",
+    "authors"       : [
+        {
+            "name"      : "WordPress Gwinnett Community",
+            "email"     : "hello@wpgwinnett.com",
+            "homepage"  : "http://wpgwinnett.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type"  : "composer",
+            "url"   : "http://wpackagist.org"
+        }
+    ],
+    "config": {
+        "vendor-dir"    : "content/mu-plugins"
+    },
+    "require": {
+        "johnpbloch/wordpress"  : ">=4.0",
+        "wpackagist/mailbag"    : "*"
+    },
+    "require-dev": {
+        "johnpbloch/wordpress"  : ">=4.0",
+        "wpackagist/mailbag"    : "*"
+    },
+    "extra": {
+        "wordpress-install-dir" : "wp",
+        "installer-paths"   : {
+            "content/plugins/{$name}"   : ["type:wordpress-plugin"],
+            "content/themes/{$name}"    : ["type:wordpress-theme"],
+            "content/mu-plugins/{$name}": ["type:wordpress-muplugin"]
+        }
+    }
+}
