@@ -1,11 +1,13 @@
 ---
-- name: Remi Dependency on CentOS 7 and Red Hat (RHEL) 7
+# The EPEL repo provides useful software packages that are not included in the official CentOS or Red Hat Enterprise Linux repositories
+- name: Update EPEL Repository
   yum:
-   name: http://dl.fedoraproject.org/pub/epel/beta/7/x86_64/epel-release-7-1.noarch.rpm
+   name: https://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-2.noarch.rpm
    state: present
   when: ansible_os_family == "RedHat" and {{ ansible_distribution_version.split('.')[0] }} == 7
   sudo: yes
 
+# The Remi repo provides newer versions of the software in the core CentOS and Red Hat repos and depends on the EPEL repository
 - name: Update Remi Repository CentOS 7 and Red Hat (RHEL) 7
   yum:
     name: http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
