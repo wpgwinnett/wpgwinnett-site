@@ -2,7 +2,7 @@
 # The EPEL repo provides useful software packages that are not included in the official CentOS or Red Hat Enterprise Linux repositories
 - name: Update EPEL Repository
   yum:
-   name: https://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-2.noarch.rpm
+   name: https://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-{{ ansible_distribution_version.split('.')[0] }}-{{ ansible_distribution_version.split('.')[1] }}.noarch.rpm
    state: present
   when: ansible_os_family == "RedHat" and {{ ansible_distribution_version.split('.')[0] }} == 7
   sudo: yes
