@@ -30,11 +30,10 @@
 		}
 	],
 	"require": {
-		"composer/installers": "1.0.18",
-		"johnpbloch/wordpress": "4.0",
-		"wpgwinnett/wpgwinnett-theme": "*"
+		"composer/installers": "~1.0.18",
+		"johnpbloch/wordpress": "4.0.*",
+		"wpgwinnett/wpgwinnett-theme": "*@dev"
 	},
-	"minimum-stability": "dev",
 	"extra": {
 		"wordpress-install-dir": "public_html/cms",
 		"installer-paths": {
@@ -42,8 +41,5 @@
 			"public_html/content/themes/{$name}": ["type:wordpress-theme"],
 			"public_html/content/mu-plugins/{$name}": ["type:wordpress-muplugin"]
 		}
-	},
-	"config": {
-		"vendor-dir": "public_html/content/mu-plugins"
 	}
 }
