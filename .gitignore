@@ -11,7 +11,7 @@
 .vagrant
 
 # Composer
-composer.lock
+/vendor/
 
 # SCSS
 .sass-cache/
