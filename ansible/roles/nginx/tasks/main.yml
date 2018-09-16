@@ -1,8 +1,0 @@
----
-##
-# Helpful nginx commands:
-#   - `service nginx status`: Find out the current status of nginx
-#   - `nginx -t`: Check nginx configuration
-##
-
-- include: ./install.yml
