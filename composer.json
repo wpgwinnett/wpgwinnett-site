@@ -1,45 +1,45 @@
 {
-	"name": "wpgwinnett/wpgwinnett-site",
-	"description": "The WP Gwinnett Website",
-	"license": "GPL-3.0+",
-	"type": "project",
-	"authors": [
-		{
-			"name": "Naomi Bush",
-			"role": "Developer"
-		},
-		{
-			"name": "Hugh Thompson",
-			"role": "Developer"
-		},
-		{
-			"name": "Micah Wood",
-			"email": "micah@wpscholar.com",
-			"homepage": "http://wpscholar.com",
-			"role": "Developer"
-		}
-	],
-	"repositories": [
-		{
-			"type": "composer",
-			"url": "http://wpackagist.org"
-		},
-		{
-			"type": "git",
-			"url": "https://github.com/wpgwinnett/wpgwinnett-theme"
-		}
-	],
-	"require": {
-		"composer/installers": "~1.0.18",
-		"johnpbloch/wordpress": "4.0.*",
-		"wpgwinnett/wpgwinnett-theme": "*@dev"
-	},
-	"extra": {
-		"wordpress-install-dir": "public_html/cms",
-		"installer-paths": {
-			"public_html/content/plugins/{$name}": ["type:wordpress-plugin"],
-			"public_html/content/themes/{$name}": ["type:wordpress-theme"],
-			"public_html/content/mu-plugins/{$name}": ["type:wordpress-muplugin"]
-		}
-	}
+  "name": "wpgwinnett/wpgwinnett-site",
+  "description": "WP Gwinnet Site",
+  "license": "GPL-2.0+",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Micah Wood",
+      "email": "micah@wpscholar.com",
+      "homepage": "http://wpscholar.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "source": "https://github.com/wpgwinnett/wpgwinnett-site",
+    "issues": "https://github.com/wpgwinnett/wpgwinnett-site/issues"
+  },
+  "repositories": {
+    "wpackagist": {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  },
+  "require": {
+    "johnpbloch/wordpress": "@stable",
+    "composer/installers": "@stable"
+  },
+  "suggest": {
+    "wp-cli/wp-cli": "@stable"
+  },
+  "extra": {
+    "wordpress-install-dir": "wp",
+    "installer-paths": {
+      "content/mu-plugins/{$name}": [
+        "type:wordpress-muplugin"
+      ],
+      "content/plugins/{$name}": [
+        "type:wordpress-plugin"
+      ],
+      "content/themes/{$name}": [
+        "type:wordpress-theme"
+      ]
+    }
+  }
 }
